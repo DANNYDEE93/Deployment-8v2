@@ -32,12 +32,12 @@ ________________________________________________________________
 ________________________________________________________________
 
 2.  Create a Jenkins manager and agent architecture:
-Instance 1:
-- Jenkins, Docker pipeline plugin
-Instance 2 (T.2 medium):
-- Docker and default-jre 
-Instance 3:
-- Terraform and default-jre
+- Instance 1:
+Jenkins, Docker pipeline plugin
+- Instance 2 (T.2 medium):
+ Docker and default-jre 
+- Instance 3:
+ Terraform and default-jre
 _________________________________
 
 
