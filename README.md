@@ -4,8 +4,7 @@
 
 ## Group Instructions:
 1. **Everyone is responsible for submitting the main repository link and updating the main repository**  
-2. Each person in a group must pick one role from below:
-```
+
 Project Manager:
 - Make sure everyone is working on their part of the deployment
 - Manage the time for each deliverable
@@ -22,20 +21,27 @@ System Administrator:
 - Create the Docker container images for ECS 
 - Create AWS user accounts for each member of your group to access your account with
 - Work on creating both Jenkinsfile with other members
+________________________________________________________________
 
-*********************************************************************************************************************************************************************
+
 ## Deployment Instructions:
 
 1. Create a Python script that will automatically push to Github but check all files in the current directory for sensitive information such as AWS secret keys and AWS access keys and will return back to the terminal a message saying what document the sensitive information is in and what the sensitive information is. Also, it stops the script from being pushed to GitHub
+
+
+________________________________________________________________
+
 2.  Create a Jenkins manager and agent architecture:
-```
 Instance 1:
 - Jenkins, Docker pipeline plugin
 Instance 2 (T.2 medium):
 - Docker and default-jre 
 Instance 3:
 - Terraform and default-jre
-```
+_________________________________
+
+
+
 3. Create an ECS and VPC Terraform file with the following components listed below:
     - 2 AZ's
     - 2 Public Subnets
@@ -43,8 +49,12 @@ Instance 3:
     - 1 Container for the backend
     - 1 Route Table
     - Security Group Ports: 8000, 3000, 80 
-    - 1 ALB    
-4. Create a Docker image of the Backend on a T.2 medium:
+    - 1 ALB
+  
+____________________________________________________________
+
+
+5. Create a Docker image of the Backend on a T.2 medium:
 ```
 Follow these steps
 - Python 3.9 required 
@@ -53,7 +63,10 @@ Follow these steps
 - install requirements.txt
 - python manage.py migrate
 - python manage.py runserver 0.0.0.0:8000
-```
+
+
+______________________________________________________________________________
+
 5. Create a Docker image of the frontend on a T.2 medium (The frontend runs on port 3000):
 ```
 Follow these steps
@@ -62,7 +75,10 @@ Follow these steps
 - cd frontend
 - npm install
 - npm start
-```
+
+_________________________________________________________________________________
+
+
 6. Create a Jenkinsfile to deploy the backend ECS Terraform files first, once it's deployed, copy the private IP address from the ECS console  
 7. Place the private address in the pacakage.json file. Replace the current IP on line 4 to your private IP
 8. Create another Jenkinsfile to deploy the ECS Terraform frontend files
