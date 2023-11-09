@@ -55,7 +55,7 @@ ____________________________________________________________
 
 
 5. Create a Docker image of the Backend on a T.2 medium:
-```
+   
 Follow these steps
 - Python 3.9 required 
 - git clone {Your repo}
@@ -68,7 +68,7 @@ Follow these steps
 ______________________________________________________________________________
 
 5. Create a Docker image of the frontend on a T.2 medium (The frontend runs on port 3000):
-```
+
 Follow these steps
 - node 10 required
 - git clone {Your repo}
