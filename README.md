@@ -23,19 +23,6 @@ System Administrator:
 - Create AWS user accounts for each member of your group to access your account with
 - Work on creating both Jenkinsfile with other members
 
-```
-3. Here are your groups:
-```
-Group 1: Danielle, Kevin G, Jo
-Group 2: Aubrey, Nehemiah, Darrielle
-Group 3: Annie, Jorge, Sameen
-Group 4: Ethan, Khalil, Luis
-Group 5: Dwayne, Saraswati, Andrew
-Group 6: Nalani, Kevin E
-Group 7: Brittney, Dolma, Belinda
-
-```
-
 *********************************************************************************************************************************************************************
 ## Deployment Instructions:
 
