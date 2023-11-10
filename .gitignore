@@ -1,0 +1,6 @@
+# Ignore specific file
+terraform.tfvars
+
+exportaws.sh
+
+d8pythonscript.py
