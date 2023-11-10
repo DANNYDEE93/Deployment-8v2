@@ -104,7 +104,7 @@ def push_to_github(exclude_files):
 #prevent the sensitive files from entering the staging environment
         os.system("git reset HEAD {file}")
         os.system('git commit -m "Add current directory to repo"')
-        os.system("git checkout -b main")
+        #os.system("git checkout -b main")
 print("Created main branch")
 
 #try:
