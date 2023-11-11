@@ -10,7 +10,7 @@ pipeline {
     stage('Test Backend') {
         steps {
             sh '''#!/bin/bash
-                python3.7 -m venv test
+                python3.9 -m venv test
                 source Deployment-8v2/backend/test3/bin/activate
                 pip install pip --upgrade
                 pip install -r requirements.txt
