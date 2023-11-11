@@ -52,7 +52,7 @@ resource "aws_ecs_service" "aws-ecs-serviceback" {
   task_definition      = aws_ecs_task_definition.aws-ecs-taskback.arn
   launch_type          = "FARGATE"
   scheduling_strategy  = "REPLICA"
-  desired_count        = 1
+  desired_count        = 2
   force_new_deployment = true
   network_configuration {
     subnets            = [
