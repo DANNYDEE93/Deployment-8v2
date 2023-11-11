@@ -1,8 +1,8 @@
 FROM node:10
 
-RUN git clone https://github.com/DANNYDEE93/Deployment-8.git
+RUN git clone https://github.com/DANNYDEE93/Deployment-8v2.git
 
-WORKDIR Deployment-8/frontend/
+WORKDIR Deployment-8v2/frontend/
 
 RUN npm install
 
