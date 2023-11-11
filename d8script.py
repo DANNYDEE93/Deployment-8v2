@@ -4,8 +4,8 @@ import subprocess
 
 
 # Set the AWS credentials in the environment variables
-os.environ['AWS_ACCESS_KEY_ID'] = ''
-os.environ['AWS_SECRET_ACCESS_KEY'] = ''
+os.environ['AWS_ACCESS_KEY_ID'] = 'YOUR ACCESS KEY'
+os.environ['AWS_SECRET_ACCESS_KEY'] = 'YOUR SECRET KEY'
 
 
 # Command to install Python3 pip and AWS CLI
@@ -19,8 +19,8 @@ for cmd in commands:
     subprocess.run(cmd, shell=True)
 
 # Set your AWS credentials (export first to define variables first)
-access_key = os.environ['AWS_ACCESS_KEY_ID']
-secret_key = os.environ['AWS_SECRET_ACCESS_KEY'] 
+access_key = os.environ['AWS_ACCESS_KEY_ID'] #OR INPUT VALUE & REMOVE VARIABLE ABOVE
+secret_key = os.environ['AWS_SECRET_ACCESS_KEY'] #OR INPUT VALUE & REMOVE VARIABLE ABOVE
 region = "us-east-1"
 
 # Create a shell script to export AWS credentials to configure
