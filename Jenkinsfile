@@ -6,7 +6,7 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS = credentials('kevingonzalez7997-dockerhub')
     }
-
+    stages{
     stage('Test Backend') {
         steps {
             sh '''#!/bin/bash
