@@ -21,4 +21,4 @@ EXPOSE 8000
 
 
 # Start the Django application using Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "my_project.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app.wsgi:application"]
