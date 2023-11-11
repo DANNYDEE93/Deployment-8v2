@@ -30,7 +30,7 @@ stages{
 
         stage('Build Backend') {
             steps {
-                sh 'docker build -t kevingonzalez7997/backv1 /backend/dockerfile'
+                sh 'docker build -t kevingonzalez7997/backv1 .'
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                 sh 'docker push kevingonzalez7997/backv1'
             }
