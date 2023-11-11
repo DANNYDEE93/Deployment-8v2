@@ -1,3 +1,4 @@
+###install the necessary dependencies to run script successfully
 import os
 import subprocess
 
@@ -6,7 +7,7 @@ import subprocess
 os.environ['AWS_ACCESS_KEY_ID'] = ''
 os.environ['AWS_SECRET_ACCESS_KEY'] = ''
 
-###install the necessary dependencies to run script successfully
+
 # Command to install Python3 pip and AWS CLI
 commands = [
     'sudo apt install -y python3-pip',
@@ -22,7 +23,7 @@ access_key = os.environ['AWS_ACCESS_KEY_ID']
 secret_key = os.environ['AWS_SECRET_ACCESS_KEY'] 
 region = "us-east-1"
 
-# Create a shell script
+# Create a shell script to export AWS credentials to configure
 with open("exportaws.sh", "w") as script_file:
     script_file.write("#!/bin/bash\n")
     script_file.write(f"export AWS_ACCESS_KEY_ID=AKIAQ66VYTZDRIPQPYVR\n")
@@ -69,9 +70,10 @@ def search_sensitive_info():
                             if 'AWS_ACCESS_KEY_ID' in line or 'AWS_SECRET_ACCESS_KEY' in line or 'access_key' in line or 'secret_key' in line:
                             #if re.search(fr'{var}\s*=\s*".*"', line):
                                 print(f"File with sensitive info: {file} - {line.strip()}")
+                                #add found files into defined list 
                                 sensitive_files.append(file)
                                 break
-                        #if 'AWS_ACCESS_KEY_ID' in line or 'AWS_SECRET_ACCESS_KEY' in line:
+                        
     return sensitive_files                   
 
 # Call the function to search within the current directory
@@ -104,25 +106,25 @@ def push_to_github(exclude_files):
 #prevent the sensitive files from entering the staging environment
         os.system("git reset HEAD {file}")
         os.system('git commit -m "Add current directory to repo"')
-        #os.system("git checkout -b main")
+        os.system("git checkout -b main")
 print("Created main branch")
 
-#try:
-    #os.system("git push -u origin main")
-#except Exception as e:
-    #print(f"Error while pushing: {e}")
-#os.system("git push origin main")
+#error handling
+try:
+    os.system("git push -u origin main")
+except Exception as e:
+    print(f"Error while pushing: {e}")
+os.system("git push origin main")
 
 sensitive_files = search_sensitive_info()
 
 
-# If sensitive files are found, exclude them before pushing
+#if sensitive files are found, exclude them before pushing
 if sensitive_files:
     print("Excluding sensitive files from the push.")
     push_to_github(sensitive_files)
 else:
-    print("No sensitive files found. Pushing all changes to GitHub.")
+    print("No sensitive files found. Push to GitHub repo was successful")
 
 print("Push to GitHub repo was successful")
-
 
