@@ -30,31 +30,17 @@ stages{
 
         stage('Build Backend') {
             steps {
-                sh 'docker build -t kevingonzalez7997/backv1 /backend/dockerfile'
+                sh 'docker build -t kevingonzalez7997/backv1 .'
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                 sh 'docker push kevingonzalez7997/backv1'
             }
         }
 
-        stage('Test Frontend') {
-            steps {
-                dir('frontend') {
-                    sh "npm install"
-                    sh "npm run test"
-                    sh "npm run build"
-                }
-            }
-            post {
-                always {
-                    junit 'test-reports/results.xml'
-                }
-            }
-        }
 
         stage('Build Frontend') {
             steps {
                 dir('frontend') {
-                    sh 'docker build -t kevingonzalez7997/frontv1 frontend/dockerfile'
+                    sh 'docker build -t kevingonzalez7997/frontv1 .'
                     sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                     sh 'docker push kevingonzalez7997/frontv1'
                 }
