@@ -15,7 +15,7 @@ resource "aws_ecs_cluster" "aws-ecs-cluster1" {
 
 # ECS Task Definition for BACKEND
 resource "aws_ecs_task_definition" "aws-ecs-taskback" {
-  family                   = "D8-task"
+  family                   = "D8B-task"
   container_definitions   = <<EOF
 [
   {
@@ -71,7 +71,7 @@ resource "aws_ecs_service" "aws-ecs-serviceback" {
 
 # ECS Task Definition for FRONTEND
 resource "aws_ecs_task_definition" "aws-ecs-taskfront" {
-  family                   = "D8-task"
+  family                   = "D8F-task"
   container_definitions   = <<EOF
 [
   {
