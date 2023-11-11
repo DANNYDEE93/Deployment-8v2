@@ -13,6 +13,15 @@ resource "aws_ecs_cluster" "aws-ecs-cluster1" {
   }
 }
 
+resource "aws_cloudwatch_log_group" "D8-logs" {
+  name = "/ecs/D8-logs"
+
+  tags = {
+    Application = "D8-logs"
+  }
+}
+
+
 # ECS Task Definition for BACKEND
 resource "aws_ecs_task_definition" "aws-ecs-taskback" {
   family                   = "D8B-task"
