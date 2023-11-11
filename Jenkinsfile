@@ -40,7 +40,7 @@ stages{
         stage('Build Frontend') {
             steps {
                 dir('frontend') {
-                    sh 'docker build -t kevingonzalez7997/frontv1 frontend/dockerfile'
+                    sh 'docker build -t kevingonzalez7997/frontv1 .'
                     sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                     sh 'docker push kevingonzalez7997/frontv1'
                 }
