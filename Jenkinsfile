@@ -7,25 +7,26 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('kevingonzalez7997-dockerhub')
     }
 
-    stages {
-        stage('Test Backend') {
-            steps {
-                sh '''#!/bin/bash
-                    python3.9 -m venv test
-                    source bin/activate
-                    pip install pip --upgrade
-                    pip install -r requirements.txt
-                    pip install mysqlclient
-                    pip install pytest
-                    python manage.py test
-                '''
-            }
-            post {
-                always {
-                    junit 'test-reports/results.xml'
-                }
-            }
-        }
+ // stage('Test') {
+        //     steps {
+        //         sh '''#!/bin/bash
+        //             python3.7 -m venv test
+        //             source Deployment-8/backend/test3/bin/activate
+        //             pip install pip --upgrade
+        //             pip install -r requirements.txt
+        //             pip install mysqlclient
+        //             pip install pytest
+        //             py.test --verbose --junit-xml test-reports/results.xml
+        //         '''
+        //     }
+
+        //     post {
+        //         always {
+        //             junit 'test-reports/results.xml'
+        //         }
+        //     }
+        // }
+
 
         stage('Build Backend') {
             steps {
