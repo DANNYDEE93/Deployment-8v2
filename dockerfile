@@ -1,6 +1,6 @@
 FROM python:3.9
 
-RUN git clone RUN git clone https://github.com/DANNYDEE93/Deployment-8v2.git
+RUN git clone https://github.com/DANNYDEE93/Deployment-8v2.git
 
 WORKDIR Deployment-8v2/backend/
 
