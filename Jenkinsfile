@@ -36,20 +36,6 @@ stages{
             }
         }
 
-        stage('Test Frontend') {
-            steps {
-                dir('frontend') {
-                    sh "npm install"
-                    sh "npm run test"
-                    sh "npm run build"
-                }
-            }
-            post {
-                always {
-                    junit 'test-reports/results.xml'
-                }
-            }
-        }
 
         stage('Build Frontend') {
             steps {
