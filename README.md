@@ -1,7 +1,6 @@
-<p align="center">
-## <ins>DREAM TEAM</ins>
-</p>
-###November 11, 2023
+<p align="center">## <ins>DREAM TEAM</ins> </p>
+
+### November 11, 2023
 
 	
 
