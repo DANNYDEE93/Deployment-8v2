@@ -136,10 +136,26 @@ _____________________________________________________________________
 ## <ins>Optimization</ins>
 ____________________________________________________________________
 
-*Fault tolerance:* We used one availability zone for our backend and one of our front end containers. To strengthen the availability of our application, we could have duplicated our infrastructure in another region.
+## Multi-Region Deployment for Enhanced Fault Tolerance
 
-*Security:* We used a private subnet for our backend container
+Duplicate the application infrastructure in a secondary AWS region to increase fault tolerance.
 
+1. **Replicate Backend Services:**
+   Duplicate backend services in the secondary region for load distribution and redundancy.
 
+2. **Load Balancing:**
+   Configure load balancing to evenly distribute requests.
 
+3. **Data Synchronization:**
+   Implement mechanisms, such as RDS, for consistent data synchronization across regions.
 
+**Benefits:**
+- **Fault Tolerance:** Reduces downtime risk, providing failover options.
+- **User Experience:** Minimizes latency for users in different geographical locations.
+
+## Domain Names for Improved Connectivity
+
+Switch from using IP addresses to domain names when connecting the front end to the back end. This simplifies the process; if a back-end container goes down, the IP wouldn't have to be reconfigured in the package.json.
+
+**Benefits:**
+- **Scalability:** Facilitates updates without changing frontend configurations.
