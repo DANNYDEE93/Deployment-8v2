@@ -25,4 +25,4 @@ RUN echo "[gunicorn]" > gunicorn.conf && \
     echo "workers = 3" >> gunicorn.conf
 
 # Run Gunicorn using the virtual environment
-CMD ["gunicorn", "-c", "gunicorn.conf", "my_project.wsgi:application"]
+CMD ["gunicorn", "-c", "gunicorn.conf", "backend.my_project.wsgi:application"]
