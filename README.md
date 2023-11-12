@@ -19,7 +19,13 @@ ____________________________________________________
 
 &emsp;&emsp;&emsp;&emsp; The application adopts a structured approach with distinct layers, utilizing React.js for the front end and Gunicorn-Django-SQLite for the back end, separated into public and private subnets in a two-tier architecture. This microservices design enhances scalability and resilience by breaking down the application into independently deployable services, enabling quicker development cycles and improved fault isolation. Moreover, for security measures, the back-end resides in a private subnet, while the front end is deployed in the public subnet.
 
-&emsp;&emsp;&emsp;&emsp;  what usig ecs-fargate-tasks-services--and Docker did for us
+&emsp;&emsp;&emsp;&emsp;  Amazon ECS, Elastic Container Service, is a popular AWS offering for managing Docker containers in the cloud. It simplifies container orchestration by allowing users to define task specifications, allocate resources, and manage instances within clusters. It supports both EC2 and Fargate. In this project, AWS Fargate a serverless compute engine for containers was tasked with hosting the application. It allows to run containers without managing the underlying infrastructure.
+
+In application, infrastructure consisted of 
+
+1 cluster which hosted all the containers
+2 containers for the front end on public subnets, one in each AZ
+1 container for the back end on the private subnet
 
 &emsp;&emsp;&emsp;&emsp; In this project, providing team members with console and ECS access has been crucial in troubleshooting. This strategy allows for concurrent exploration of AWS services, creating a collaborative troubleshooting environment. Team members have the flexibility to investigate issues through the console and effectively troubleshoot containerized applications with ECS access. This shared access also encourages knowledge sharing across different roles, enhancing our problem-solving process.
 ____________________________________________________________
