@@ -132,9 +132,9 @@ ____________________________________________________________
 
 ![system diagram](https://github.com/DANNYDEE93/Deployment-8v2/blob/main/Deploy8.drawio%20(1).png)
 
-_________________________________________________________________
+_____________________________________________________________________
 ## <ins>Optimization</ins>
-____________________________________________________________________-
+____________________________________________________________________
 
 *Fault tolerance:* We used one availability zone for our backend and one of our front end containers. To strengthen the availability of our application, we could have duplicated our infrastructure in another region.
 
