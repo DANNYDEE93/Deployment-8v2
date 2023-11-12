@@ -40,7 +40,8 @@ resource "aws_ecs_task_definition" "aws-ecs-taskback" {
     },
     "portMappings": [
       {
-        "containerPort": 8000
+        "containerPort": 8000,
+          "hostPort": 8000
       }
     ]
   }
