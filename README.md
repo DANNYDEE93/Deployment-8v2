@@ -56,7 +56,7 @@ ________________________________________________________________________
 
 - Create main GitHub repo → Go to *Settings* → Select *Collaborators* → Select *Add people* to add team members so we can all work on one repo and work on our Jenkins pipeline together and separately if needed.
 
-- [*Python script:*](d8script.py) Created to automate the *AWS CLI installation*, *AWS configurations*, search through files for any info involving my AWS access and secret keys, and automate pushes to GitHub excluding the files with sensitive info from local repo.
+- [*Python script:*](d8script.py) Created to automate *AWS CLI installation*, *AWS configurations*, *GitHub initialization*, *GitHub configurations*, search through files for any info involving my AWS access and secret keys, and to exclude these files with sensitive information before pushing to GitHub to ensure security and avoid compromisation of your AWS account. 
 
 - Configured Jenkinsfile explained later in our steps.
 
