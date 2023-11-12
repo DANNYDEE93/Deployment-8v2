@@ -19,6 +19,10 @@ RUN python manage.py migrate
 # Expose the port that your application listens on
 EXPOSE 8000
 
+# Create a Gunicorn configuration file
+RUN echo "[gunicorn]" > gunicorn.conf && \
+    echo "bind = 0.0.0.0:8000" >> gunicorn.conf && \
+    echo "workers = 3" >> gunicorn.conf
 
-# Start the Django application using Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "myproject.wsgi:application"]
+# Run Gunicorn using the virtual environment
+CMD ["gunicorn", "-c", "gunicorn.conf", "my_project.wsgi:application"]
