@@ -1,8 +1,7 @@
 ## <ins>DREAM TEAM</ins> 
-
+________________________________________________________
 #### November 11, 2023
-
-	
+________________________________________________________	
 
 #### *Project Manager:* Danielle Davis
 #### *Chief Architect:* Jo White
