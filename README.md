@@ -71,7 +71,7 @@ ________________________________________________________________________________
 
  **<ins>System administrator configured Docker files for the frontend and backend:</ins>**
  
-<ins>Created AWS user accounts (user IAM roles) for team members:</ins> 
+- Created AWS user accounts (user IAM roles) for team members:::::::
 
 - Creating Docker images through Dockerfiles ensures a standardized method for packaging and distributing applications. This approach guarantees consistent execution across diverse environments, reducing the risk of configuration drift. The application comprises two tiers, each with its Docker image.
 
