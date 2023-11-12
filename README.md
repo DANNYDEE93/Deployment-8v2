@@ -53,7 +53,7 @@ ________________________________________________________________________
 
 - Create free account and [Jira Board](https://www.atlassian.com/software/jira)
 
-[jiraboard]()
+[jiraboard](Results/JiraBoard.png)
 
 - Create main GitHub repo → Go to *Settings* → Select *Collaborators* → Select *Add people* to add team members so we could all work on one repo and work on our Jenkins pipeline together and separately if needed.
 
