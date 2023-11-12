@@ -27,7 +27,7 @@ In application, infrastructure consisted of
 - 2 containers for the front end on public subnets, one in each AZ
 - 1 container for the back end on the private subnet
 
-&emsp;&emsp;&emsp;&emsp; In this project, providing team members with console and ECS access has been crucial in troubleshooting. This strategy allows for concurrent exploration of AWS services, creating a collaborative troubleshooting environment. Team members have the flexibility to investigate issues through the console and effectively troubleshoot containerized applications with ECS access. This shared access also encourages knowledge sharing across different roles, enhancing our problem-solving process.
+&emsp;&emsp;&emsp;&emsp; 
 ____________________________________________________________
 ## <ins>Issues</ins>
 _______________________________________________________________
@@ -79,7 +79,8 @@ ________________________________________________________________________________
 - Creating Docker images through Dockerfiles ensures a standardized method for packaging and distributing applications. This approach guarantees consistent execution across diverse environments, reducing the risk of configuration drift. The application comprises two tiers, each with its Docker image.
 
 - The [Dockerfile](frontend/dockerfile) is employed to construct an image for the application's front end, while the back end follows its dedicated [Dockerfile](dockerfile). After the build process, these images are uploaded to Docker Hub, a cloud-based service designed for hosting Docker images. The seamless integration of this workflow is facilitated by Jenkins credentials
-  
+
+  -In this project, providing team members with console and ECS access has been crucial in troubleshooting. This strategy allows for concurrent exploration of AWS services, creating a collaborative troubleshooting environment. Team members have the flexibility to investigate issues through the console and effectively troubleshoot containerized applications with ECS access. This shared access also encourages knowledge sharing across different roles, enhancing our problem-solving process.
 __________________________________________________________________________
 **<ins>Create & Edit Application Files:</ins>**
 __________________________________________________________________________
