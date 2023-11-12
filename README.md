@@ -11,10 +11,7 @@ ____________________________________________________________
 ## <ins>Purpose</ins>
 _________________________________________________________
 
-&emsp;&emsp;&emsp;&emsp;	The deployment involves creating a secure Python script for GitHub integration, managing Jenkins CI/CD pipelines, and configuring AWS resources via Terraform for a resilient and scalable multi-container application. This setup not only showcases the use of modern DevOps tools and practices but also stresses the importance of team collaboration and role-based responsibilities in a real-world software deployment scenario.
-
-
-&emsp;&emsp;&emsp;&emsp;	This deployment aims to launch an e-commerce application on AWS using ECS. Jenkins and Terraform automate infrastructure provisioning, with GitHub and Dockerhub storing source code and application images. Additionally, a Python script prevents unintentional exposure of sensitive information. To enhance team collaboration, GitHub collaboration features and AWS user accounts have been created.
+&emsp;&emsp;&emsp;&emsp;	To launch an e-commerce application on AWS using ECS. Jenkins and Terraform automate infrastructure provisioning, with GitHub and Dockerhub storing source code and application images. Additionally, a Python script prevents unintentional exposure of sensitive information. To enhance team collaboration, GitHub collaboration features and AWS user accounts have been created.
 
 ___________________________________________________
 ## <ins>App Description</ins>
@@ -22,7 +19,7 @@ ____________________________________________________
 
 &emsp;&emsp;&emsp;&emsp; The application adopts a structured approach with distinct layers, utilizing React.js for the front end and Gunicorn-Django-SQLite for the back end, separated into public and private subnets in a two-tier architecture. This microservices design enhances scalability and resilience by breaking down the application into independently deployable services, enabling quicker development cycles and improved fault isolation. Moreover, for security measures, the back-end resides in a private subnet, while the front end is deployed in the public subnet.
 
-&emsp;&emsp;&emsp;&emsp;  ecs-fargate-tasks-services
+&emsp;&emsp;&emsp;&emsp;  what usig ecs-fargate-tasks-services--and Docker did for us
 
 &emsp;&emsp;&emsp;&emsp; In this project, providing team members with console and ECS access has been crucial in troubleshooting. This strategy allows for concurrent exploration of AWS services, creating a collaborative troubleshooting environment. Team members have the flexibility to investigate issues through the console and effectively troubleshoot containerized applications with ECS access. This shared access also encourages knowledge sharing across different roles, enhancing our problem-solving process.
 ____________________________________________________________
