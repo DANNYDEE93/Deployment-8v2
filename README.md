@@ -22,6 +22,8 @@ ____________________________________________________
 
 &emsp;&emsp;&emsp;&emsp; The application adopts a structured approach with distinct layers, utilizing React.js for the front end and Gunicorn-Django-SQLite for the back end, separated into public and private subnets in a two-tier architecture. This microservices design enhances scalability and resilience by breaking down the application into independently deployable services, enabling quicker development cycles and improved fault isolation. Moreover, for security measures, the back-end resides in a private subnet, while the front end is deployed in the public subnet.
 
+&emsp;&emsp;&emsp;&emsp;  ecs-fargate-tasks-services
+
 &emsp;&emsp;&emsp;&emsp; In this project, providing team members with console and ECS access has been crucial in troubleshooting. This strategy allows for concurrent exploration of AWS services, creating a collaborative troubleshooting environment. Team members have the flexibility to investigate issues through the console and effectively troubleshoot containerized applications with ECS access. This shared access also encourages knowledge sharing across different roles, enhancing our problem-solving process.
 ____________________________________________________________
 ## <ins>Issues</ins>
@@ -53,13 +55,16 @@ ________________________________________________________________________________
 
 **<ins>Chief architect managed Terraform files:</ins>** 
 
-- Configured [Jenkins infrastructure](Setup files/Jenkinsinfra.tf)
+- Configured [Jenkins infrastructure](Setup files/Jenkinsinfra.tf):
+  
 The management of Terraform files is central to configuring our Jenkins infrastructure, Docker agent server, and Terraform agent server. Jenkins is employed for streamlining CI/CD automation, Docker ensures consistent and isolated environments for application deployment, and Terraform aids in the efficient management of our infrastructure across multiple cloud environments. Our Terraform configuration is modularized into distinct files (Jenkinsinfra.tf, ecs.tf, vpc.tf, alb.tf), enhancing clarity and simplifying error handling in our scalable and agile infrastructure setup.
 
-- Configured [Load Balancer](intTerraform/alb.tf)
+- Configured [Load Balancer](intTerraform/alb.tf):
+  
 A Load Balancer was included in the deployment to distribute incoming traffic across two subnets in this case, enhancing application responsiveness and availability. It ensures scalability and reliability, effectively managing traffic spikes and server performance, thereby maintaining high application availability.
 
-- Configured [cluster environment](intTerraform/ecs.tf)
+- Configured [cluster environment](intTerraform/ecs.tf):
+  
 An ESC cluster environment was configured to enhance the application's performance and reliability. It allows for workload distribution across multiple servers, ensuring high availability and fault tolerance, and facilitates easy scalability as your application's demands grow.
 
 ________________________________________________________________________________________
