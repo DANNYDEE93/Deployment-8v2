@@ -155,3 +155,7 @@ Switch from using IP addresses to domain names when connecting the front end to 
 
 **Benefits:**
 - **Scalability:** Facilitates updates without changing frontend configurations.
+_____________________________________________________________________
+## <ins> Conclusion </ins>
+____________________________________________________________________
+The application was successfully deployed on the AWS Network using ECS, with Docker building images from Dockerfiles and pushing them to DockerHub. Terraform handled infrastructure provisioning, and Jenkins streamlined automation. Collaboration was enhanced through tools like meet calls, Slack, Scrum meetings, AWS user collaboration, GitHub access, and Jira integration. The successful deployment of the project stands as a noteworthy accomplishment, demonstrating a smooth build and deployment process. Post-deployment efforts are focused on identifying opportunities for optimizing processes and refining solutions.
