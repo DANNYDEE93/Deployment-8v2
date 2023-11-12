@@ -53,7 +53,7 @@ ________________________________________________________________________
 
 - Create free account and [Jira Board](https://www.atlassian.com/software/jira)
 
-[jiraboard](https://github.com/DANNYDEE93/Deployment-8v2/blob/main/Results/JiraBoard.png)
+![jiraboard](https://github.com/DANNYDEE93/Deployment-8v2/blob/main/Results/JiraBoard.png)
 
 - Create main GitHub repo → Go to *Settings* → Select *Collaborators* → Select *Add people* to add team members so we could all work on one repo and work on our Jenkins pipeline together and separately if needed.
 
@@ -133,7 +133,7 @@ ____________________________________________________________
 
 <ins>Chief architect created deployment diagram:</ins>
 
-[system diagram](https://github.com/DANNYDEE93/Deployment-8v2/blob/main/Deploy8.drawio.png)
+![system diagram](https://github.com/DANNYDEE93/Deployment-8v2/blob/main/Deploy8.drawio.png)
 
 _________________________________________________________________
 ## <ins>Optimization</ins>
