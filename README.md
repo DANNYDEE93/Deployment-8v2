@@ -130,7 +130,7 @@ ____________________________________________________________
 
 <ins>Chief architect created deployment diagram:</ins>
 
-![system diagram](https://github.com/DANNYDEE93/Deployment-8v2/blob/main/Deploy8.drawio.png)
+![system diagram](https://github.com/DANNYDEE93/Deployment-8v2/blob/main/Deploy8.drawio%20(1).png)
 
 _________________________________________________________________
 ## <ins>Optimization</ins>
