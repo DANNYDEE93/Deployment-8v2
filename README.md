@@ -23,9 +23,9 @@ ____________________________________________________
 
 In application, infrastructure consisted of 
 
-1 cluster which hosted all the containers
-2 containers for the front end on public subnets, one in each AZ
-1 container for the back end on the private subnet
+- 1 cluster which hosted all the containers
+- 2 containers for the front end on public subnets, one in each AZ
+- 1 container for the back end on the private subnet
 
 &emsp;&emsp;&emsp;&emsp; In this project, providing team members with console and ECS access has been crucial in troubleshooting. This strategy allows for concurrent exploration of AWS services, creating a collaborative troubleshooting environment. Team members have the flexibility to investigate issues through the console and effectively troubleshoot containerized applications with ECS access. This shared access also encourages knowledge sharing across different roles, enhancing our problem-solving process.
 ____________________________________________________________
