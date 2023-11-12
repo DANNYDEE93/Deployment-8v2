@@ -41,9 +41,9 @@ _______________________________________________________________
 
 - Incorrect naming conventions caused issues within the Terraform files.
   
-- Configuration & testing: We kept trying to deploy our container manually but the backend task kept failing because we realized every time we make changes to the directory repo files, we needed to make a new image so that it could be reflected in our application. Jenkins looking for github making the automation of our deployment necessary.
+- Configuration & testing: We kept trying to deploy our container manually but the backend task kept failing because we realized every time we make changes to the directory repo files, we needed to make a new image so that it could be reflected in our application. Jenkins looking for GitHub making the automation of our deployment necessary.
   
-- Retrieving Backend container IP address: we  attempting to retrieve the ip address through aws command line interface but realized we could find the ip address through the network interface associated with the private subnet that we created within our VPC that we spun up after applying our terraform [vpc.tf](intTerraform/vpc.tf) file.
+- Retrieving Backend container IP address: we attempted to retrieve the IP address through the aws command line interface but realized we could find the IP address through the network interface associated with the private subnet that we created within our VPC that we spun up after applying our terraform [vpc.tf](intTerraform/vpc.tf) file.
 
 _______________________________________________________________________
 ## <ins>Project Organization</ins>
@@ -51,11 +51,11 @@ ________________________________________________________________________
 
 **<ins>Project manager created team workspace:</ins>** 
 
-- Create free account and [Jira Board](https://www.atlassian.com/software/jira)
+- Create a free account and [Jira Board](https://www.atlassian.com/software/jira)
 
 ![jiraboard](https://github.com/DANNYDEE93/Deployment-8v2/blob/main/Results/JiraBoard.png)
 
-- Create main GitHub repo → Go to *Settings* → Select *Collaborators* → Select *Add people* to add team members so we could all work on one repo and work on our Jenkins pipeline together and separately if needed.
+- Create main GitHub repo → Go to *Settings* → Select *Collaborators* → Select *Add people* to add team members so we can all work on one repo and work on our Jenkins pipeline together and separately if needed.
 
 - [*Python script:*](d8script.py) Created to automate the *AWS CLI installation*, *AWS configurations*, search through files for any info involving my AWS access and secret keys, and automate pushes to GitHub excluding the files with sensitive info from local repo.
 
@@ -92,11 +92,11 @@ __________________________________________________________________________
 
 **Jenkinsfile:** 
 
-Compared to our previous deployment, we listed out each stage for the Docker and Terraform steps. We needed to combine the deployment stages for both of our backend and frontend containers since the frontend container connects to the backend’s API in order to connect to the application and data logical layer. If the backend stages were unable to build our Docker images, then the front end would not work.
+Compared to our previous deployment, we listed out each stage for the Docker and Terraform steps. We needed to combine the deployment stages for both of our backend and frontend containers since the frontend container connects to the backend’s API to connect to the application and data logical layer. If the backend stages were unable to build our Docker images, then the front end would not work.
 
 **Build Backend & Build Frontend:** 
 
-With this [Jenkinsfile](Jenkinsfile), we consolidated my Docker steps for the frontend and the backend to build our image, login into the appropriate Docker Hub, and to push our image to Docker Hub. To make sure that the Jenkinsfile could locate both Dockerfiles separately, we placed our *build frontend* stage in the frontend directory to find our frontend dockerfile and left our backend dockerfile in the main directory. These Docker Hub credentials were associated with our Jenkins node *awsDeploy* to connect our Jenkins pipeline to our Docker agent server.
+With this [Jenkinsfile](Jenkinsfile), we consolidated my Docker steps for the frontend and the backend to build our image, login into the appropriate Docker Hub, and push our image to Docker Hub. To make sure that the Jenkinsfile could locate both Dockerfiles separately, we placed our *build frontend* stage in the frontend directory to find our frontend dockerfile and left our backend dockerfile in the main directory. These Docker Hub credentials were associated with our Jenkins node *awsDeploy* to connect our Jenkins pipeline to our Docker agent server.
  
 **Terraform:** 
 
@@ -139,7 +139,7 @@ _________________________________________________________________
 ## <ins>Optimization</ins>
 ____________________________________________________________________-
 
-*Fault tolerance:* We used one availability zone for our backend and one of our front end containers. To strengthen the availability of our application, we could have duplicated our infrastructure into another region.
+*Fault tolerance:* We used one availability zone for our backend and one of our front end containers. To strengthen the availability of our application, we could have duplicated our infrastructure in another region.
 
 *Security:* We used a private subnet for our backend container
 
