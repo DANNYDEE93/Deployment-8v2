@@ -49,11 +49,11 @@ _______________________________________________________________________
 ## <ins>Project Organization</ins>
 ________________________________________________________________________
 
-<ins>Project manager created team workspace:</ins> 
+**<ins>Project manager created team workspace:</ins>** 
 
 - Create free account and [Jira Board](https://www.atlassian.com/software/jira)
 
-
+[jiraboard]()
 
 - Create main GitHub repo → Go to *Settings* → Select *Collaborators* → Select *Add people* to add team members so we could all work on one repo and work on our Jenkins pipeline together and separately if needed.
 
@@ -85,6 +85,8 @@ ________________________________________________________________________________
 - The [Dockerfile](frontend/dockerfile) is employed to construct an image for the application's front end, while the back end follows its dedicated [Dockerfile](dockerfile). After the build process, these images are uploaded to Docker Hub, a cloud-based service designed for hosting Docker images. The seamless integration of this workflow is facilitated by Jenkins credentials
 
 _________________________________________________________________________
+**<ins>Additional Steps</ins>**
+__________________________________________________________________________
 **<ins>Create & Edit Application Files:</ins>**
 __________________________________________________________________________
 
@@ -109,13 +111,21 @@ _________________________________________________________________
 **<ins>Jenkins Staging Environment:</ins>**
 ______________________________________________________________________
 
-<ins>Purpose:</ins> Our Jenkins staging environment is crucial for rigorously testing our CI/CD pipelines, ensuring the reliability and stability of our processes before they are deployed in the production environment. This approach is vital for maintaining high quality and avoiding potential disruptions in live settings.
+**<ins>Purpose:</ins>** 
 
-<ins>Jenkins Agent Nodes:</ins> To optimize our build and deployment efficiency, we have configured Jenkins agent nodes to enable parallel execution of tasks. This setup significantly enhances the speed and efficiency of our build processes. Specifically, we have strategically placed agent nodes on both the Terraform and Docker servers. This placement is designed to streamline and expedite tasks specific to infrastructure provisioning and container management, respectively, ensuring a smooth and efficient pipeline flow.
+Our Jenkins staging environment is crucial for rigorously testing our CI/CD pipelines, ensuring the reliability and stability of our processes before they are deployed in the production environment. This approach is vital for maintaining high quality and avoiding potential disruptions in live settings.
 
-<ins>Credentials for Jenkins:</ins> To ensure Terraform has the necessary access to AWS, it requires both AWS access and secret keys. Since the main.tf files are hosted on GitHub but shouldn't have public access for security reasons, Jenkins credentials are created for AWS. Similarly, credentials are created for Docker Hub with a username and password:
-For AWS:  Navigate to **Manage Jenkins > Credentials > System > Global credentials (unrestricted)** > Create two credentials for access and secret keys as "Secret text."
-For Docker Hub: Navigate to **Manage Jenkins > Credentials > System > Global credentials (unrestricted)** > Create credentials for access and secret keys using DockerHub-generated key and username.
+**<ins>Jenkins Agent Nodes:</ins>** 
+
+To optimize our build and deployment efficiency, we have configured Jenkins agent nodes to enable parallel execution of tasks. This setup significantly enhances the speed and efficiency of our build processes. Specifically, we have strategically placed agent nodes on both the Terraform and Docker servers. This placement is designed to streamline and expedite tasks specific to infrastructure provisioning and container management, respectively, ensuring a smooth and efficient pipeline flow.
+
+**<ins>Credentials for Jenkins:</ins>** 
+
+To ensure Terraform has the necessary access to AWS, it requires both AWS access and secret keys. Since the main.tf files are hosted on GitHub but shouldn't have public access for security reasons, Jenkins credentials are created for AWS. Similarly, credentials are created for Docker Hub with a username and password:
+
+*For AWS:*  Navigate to **Manage Jenkins > Credentials > System > Global credentials (unrestricted)** > Create two credentials for access and secret keys as "Secret text."
+
+*For Docker Hub:* Navigate to **Manage Jenkins > Credentials > System > Global credentials (unrestricted)** > Create credentials for access and secret keys using DockerHub-generated key and username.
 
 _________________________________________________________
 ## <ins> System Diagram </ins>
