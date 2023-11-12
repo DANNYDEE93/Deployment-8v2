@@ -83,9 +83,7 @@ ________________________________________________________________________________
 - Creating Docker images through Dockerfiles ensures a standardized method for packaging and distributing applications. This approach guarantees consistent execution across diverse environments, reducing the risk of configuration drift. The application comprises two tiers, each with its Docker image.
 
 - The [Dockerfile](frontend/dockerfile) is employed to construct an image for the application's front end, while the back end follows its dedicated [Dockerfile](dockerfile). After the build process, these images are uploaded to Docker Hub, a cloud-based service designed for hosting Docker images. The seamless integration of this workflow is facilitated by Jenkins credentials
-
-_________________________________________________________________________
-**<ins>Additional Steps</ins>**
+  
 __________________________________________________________________________
 **<ins>Create & Edit Application Files:</ins>**
 __________________________________________________________________________
